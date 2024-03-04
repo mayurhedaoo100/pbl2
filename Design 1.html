@@ -20,10 +20,16 @@
             color: #e0e0e0;
         }
 
-        .container {
+        .section {
             max-width: 100%;
-            margin: 0 auto;
-            padding: 20px;
+            margin: 1%;
+            margin-top: 1.5%;
+        }
+
+        .titles{
+            width: 100%;
+            text-align: start;
+            color: #1daede;
         }
 
         .carousel {
@@ -78,11 +84,43 @@
             }
         }
 
+        .stdOrg {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .stdOrg_main-container {
+            display: flex;
+            width: 100%;
+        }
+        .stdOrg_container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 50%;
+            margin: 1%;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+        }
+        .stdOrg_container img {
+            height: 50px;
+            width: 50px;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+        .stdOrg_container h3 {
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+
 </style>
 </head>
 <body>
-<div class="container">
-<h2 style="color: #1daede;">Events and News</h2>
+<div class="section updates_container">
+<h2 class="titles">Events and News</h2>
 <div class="carousel">
 <!-- Carousel items -->
 <div class="carousel-item">
@@ -111,6 +149,40 @@
 </div>
 
 </div>
+</div>
+
+<div class="section stdOrg">
+    <h2 class="titles">Students Organisations</h2>
+    <div class="stdOrg_main-container">
+        <div class="stdOrg_container">
+            <img src="https://www.logomaker.com/wpstatic/uploads/2021/10/LogoMaker.jpg" alt="Logo 1">
+            <h3>Name 1</h3>
+        </div>
+        <div class="stdOrg_container">
+            <img src="https://www.logomaker.com/wpstatic/uploads/2021/10/LogoMaker.jpg" alt="Logo 2">
+            <h3>Name 2</h3>
+        </div>
+    </div>
+    <div class="stdOrg_main-container">
+        <div class="stdOrg_container">
+            <img src="https://www.logomaker.com/wpstatic/uploads/2021/10/LogoMaker.jpg" alt="Logo 1">
+            <h3>Name 1</h3>
+        </div>
+        <div class="stdOrg_container">
+            <img src="https://www.logomaker.com/wpstatic/uploads/2021/10/LogoMaker.jpg" alt="Logo 2">
+            <h3>Name 2</h3>
+        </div>
+    </div>
+    <div class="stdOrg_main-container">
+        <div class="stdOrg_container">
+            <img src="https://www.logomaker.com/wpstatic/uploads/2021/10/LogoMaker.jpg" alt="Logo 1">
+            <h3>Name 1</h3>
+        </div>
+        <div class="stdOrg_container">
+            <img src="https://www.logomaker.com/wpstatic/uploads/2021/10/LogoMaker.jpg" alt="Logo 2">
+            <h3>Name 2</h3>
+        </div>
+    </div>
 </div>
 
 </body>
