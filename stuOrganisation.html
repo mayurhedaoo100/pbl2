@@ -1,136 +1,53 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Slideshow Images</title>
-    <style>
-      body {
-        background-color: #111;
-        color: #fff;
-        font-family: Arial, sans-serif;
-      }
-      .slider {
-        width: 500px;
-        height: 300px;
-        background-color: #222;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-        text-align: center;
-        overflow: hidden;
-        position: relative;
-      }
-      .image-container {
-        width: 1500px;
-        height: 300px;
-        clear: both;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transition: left 0.5s;
-      }
-      .slide {
-        float: left;
-        margin: 0px;
-        padding: 0px;
-        position: relative;
-      }
-      .buttons {
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-      .buttons a {
-        display: inline-block;
-        height: 10px;
-        width: 10px;
-        border-radius: 50px;
-        background-color: rgba(255, 255, 255, 0.5);
-        margin: 0 5px;
-      }
-      .buttons a.active {
-        background-color: #fff;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="slider">
-      <div class="image-container">
-        <img src="https://www.w3docs.com/uploads/media/default/0001/03/66cf5094908491e69d8187bcf934050a4800b37f.jpeg" class="slide" width="500" height="300" />
-        <img src="https://www.w3docs.com/uploads/media/default/0001/03/b7d624354d5fa22e38b0ab1f9b905fb08ccc6a05.jpeg" class="slide" width="500" height="300" />
-        <img src="https://www.w3docs.com/uploads/media/default/0001/03/5bfad15a7fd24d448a48605baf52655a5bbe5a71.jpeg" class="slide" width="500" height="300" />
-      </div>
-      <div class="buttons">
-        <a href="#" class="active"></a>
-        <a href="#"></a>
-        <a href="#"></a>
-      </div>
+<style>
+.section.campus-info {
+    background-color: #181818;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.campus-info .contact-info p {
+    margin-bottom: 10px;
+}
+
+.campus-info .contact-info .social-media ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.campus-info .contact-info .social-media ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.campus-info .contact-info .social-media ul li:last-child {
+    margin-right: 0;
+}
+
+.campus-info .contact-info .social-media ul li a {
+    text-decoration: none;
+    color: #39a5e0; 
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.campus-info .contact-info .social-media ul li a:hover {
+    color: #1daede;
+}
+
+</style>
+<div class="section campus-info">
+    <h2 class="titles">Campus Information</h2>
+    <div class="contact-info">
+        <p><strong>Contact Number:</strong> 123-456-7890</p>
+        <p><strong>Email:</strong> info@example.com</p>
+        <div class="social-media">
+            <p><strong>Social Media:</strong></p>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <!-- Add more social media links as needed -->
+            </ul>
+        </div>
     </div>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        const slides = document.querySelectorAll(".slide");
-        const buttons = document.querySelectorAll(".buttons a");
-
-        let currentSlide = 0;
-
-        function showSlide(n) {
-          slides.forEach(slide => {
-            slide.style.display = "none";
-          });
-          slides[n].style.display = "block";
-
-          buttons.forEach(button => {
-            button.classList.remove("active");
-          });
-          buttons[n].classList.add("active");
-        }
-
-        function nextSlide() {
-          currentSlide = (currentSlide + 1) % slides.length;
-          showSlide(currentSlide);
-        }
-
-        function previousSlide() {
-          currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-          showSlide(currentSlide);
-        }
-
-        buttons.forEach((button, index) => {
-          button.addEventListener("click", function() {
-            currentSlide = index;
-            showSlide(currentSlide);
-          });
-        });
-
-        // Swipe functionality
-        let touchstartX = 0;
-        let touchendX = 0;
-
-        const slider = document.querySelector(".slider");
-
-        slider.addEventListener("touchstart", function(event) {
-          touchstartX = event.changedTouches[0].screenX;
-        });
-
-        slider.addEventListener("touchend", function(event) {
-          touchendX = event.changedTouches[0].screenX;
-          handleSwipe();
-        });
-
-        function handleSwipe() {
-          if (touchendX < touchstartX) {
-            nextSlide();
-          }
-
-          if (touchendX > touchstartX) {
-            previousSlide();
-          }
-        }
-
-        setInterval(nextSlide, 5000); // Change slide every 5 seconds
-        showSlide(currentSlide); // Show initial slide
-      });
-    </script>
-  </body>
-</html>
+</div>
