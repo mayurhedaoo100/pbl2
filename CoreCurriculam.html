@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Curriculum</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+            font-size: 0.9em;
+            font-weight: 100;
+        }
+        .header {
+            background-color: #282727;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.2em;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        .section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px 0;
+        }
+        .section h2 {
+            width: 100%;
+            text-align: center;
+            color: #1daede;
+            margin: 20px 0;
+        }
+        .bran_container {
+            flex: 0 0 calc(50% - 20px); /* Each container occupies 50% of the screen width with spacing */
+            max-width: calc(50% - 20px); /* Set max-width for flexibility */
+            margin: 20px; /* Add margin to leave space from left and right */
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(48, 48, 48, 0.1);
+            border-radius: 5px;
+            background-color: #181818;
+            text-align: center;
+            overflow: hidden; /* Hide overflow to ensure image covers the container */
+            position: relative; /* Positioning for absolute image */
+        }
+        .bran_container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the container with the image */
+        }
+        .bran_container h4 {
+            font-size: 16px;
+            margin-top: 10px;
+            color: #ffffff;
+            position: relative; /* Ensure text is on top of the image */
+            z-index: 1; /* Ensure text is on top of the image */
+        }
+        .bran_container a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Media query for screens up to 768px */
+        @media (max-width: 768px) {
+            .bran_container {
+                flex: 0 0 calc(100% - 20px); /* Each container occupies 100% of the screen width with spacing */
+                max-width: calc(100% - 20px); /* Set max-width for flexibility */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Core Curriculum</h1>
+    </div>
+    <div class="section">
+        <h2>According to Savitribai Phule Pune University Pattern 2019 Curriculum</h2>
+        <div class="bran_container">
+            <a href="computer_engineering.html">
+                <img src="https://img.freepik.com/free-vector/minimalistic-interior_1284-13504.jpg" alt="1">
+                <h4>Computer Engineering</h4>
+            </a>
+        </div>
+        <div class="bran_container">
+            <a href="information_technology.html">
+                <img src="https://img.freepik.com/free-vector/minimalistic-interior_1284-13504.jpg" alt="2">
+                <h4>Information Technology</h4>
+            </a>
+        </div>
+        <div class="bran_container">
+            <a href="telecommunication_engineering.html">
+                <img src="https://img.freepik.com/free-vector/minimalistic-interior_1284-13504.jpg" alt="3">
+                <h4>Electronic & Telecommunication Engineering</h4>
+            </a>
+        </div>
+        <div class="bran_container">
+            <a href="mechanical_engineering.html">
+                <img src="https://img.freepik.com/free-vector/minimalistic-interior_1284-13504.jpg" alt="4">
+                <h4>Mechanical Engineering</h4>
+            </a>
+        </div>
+        <div class="bran_container">
+            <a href="electrical_engineering.html">
+                <img src="https://img.freepik.com/free-vector/minimalistic-interior_1284-13504.jpg" alt="5">
+                <h4>Electrical Engineering</h4>
+            </a>
+        </div>
+        <div class="bran_container">
+            <a href="civil_engineering.html">
+                <img src="https://img.freepik.com/free-vector/minimalistic-interior_1284-13504.jpg" alt="6">
+                <h4>Civil Engineering</h4>
+            </a>
+        </div>
+        <div class="bran_container">
+            <a href="electronics_computer_engineering.html">
+                <img src="https://img.freepik.com/free-vector/minimalistic-interior_1284-13504.jpg" alt="7">
+                <h4>Electronics and Computer Engineering</h4>
+            </a>
+        </div>
+        <div class="bran_container">
+            <a href="ai_data_science.html">
+                <img src="https://img.freepik.com/free-vector/minimalistic-interior_1284-13504.jpg" alt="8">
+                <h4>Artificial Intelligence And Data Science</h4>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
